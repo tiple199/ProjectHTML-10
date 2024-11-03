@@ -5,6 +5,10 @@
     padding-top: 54px;
     width: min(1240px,100%);
     display: none;
+    @include abstracts.breakpoint(lg){
+        position: initial;
+        padding-top: 0;
+    }
     &__inner{
         --inner-padding:30px;
         position: relative;
@@ -20,7 +24,17 @@
             transform: translateX(-50%);
             filter: var(--dropdown-arrow-color);
         }
+        @include abstracts.breakpoint(lg){
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            padding: 0 40px;
+            &::before{
+                content: none;
+            }
+        }
     }
+    
 }
 .top-menu{
     --main-column-width:292px;
@@ -31,6 +45,11 @@
         width: var(--main-column-width);
         height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
+        @include abstracts.breakpoint(lg){
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 .menu-column{
@@ -39,6 +58,9 @@
     .menu-column + .menu-column{
         margin-top: 22px;
     }
+    @include abstracts.breakpoint(lg){
+        margin-top: 10px;
+    }
     &__icon{
         position: relative;
         flex-shrink: 0;
@@ -46,6 +68,9 @@
         height: 36px;
         @include abstracts.breakpoint(xl){
             display: none;
+        }
+        @include abstracts.breakpoint(lg){
+            display: block;
         }
     }
     &__content{
@@ -71,6 +96,9 @@
         line-height: 1.5; /* 150% */
         margin-bottom: 19px;
         margin-top: 4px;
+        @include abstracts.breakpoint(lg){
+            margin-bottom: 26px;
+        }
     }
     &__item{
         &--active .sub-menu{
@@ -103,6 +131,16 @@
         inset: initial;
         grid-template-columns: repeat(4,1fr);
         height: var(--max-inner-height);
+        padding-left: 0;
+        @include abstracts.breakpoint(lg){
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+
+    }
+    @include abstracts.breakpoint(lg){
+        position: initial;
+        grid-template-columns: 1fr;
         padding-left: 0;
     }
 }
