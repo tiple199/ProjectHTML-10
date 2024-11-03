@@ -1430,16 +1430,15 @@ html {
     position: fixed;
     inset: 0 50% 0 0;
     background: var(--sidebar-bg);
-    box-shadow: var(--sidebar-shadow);
     margin-left: 0;
     z-index: 9;
-    padding-top: 20px 0;
     transform: translateX(-100%);
     transition: 0.5s ease;
     border-radius: 0px 20px 20px 0px;
   }
   .navbar.show {
     transform: translateX(0);
+    box-shadow: var(--sidebar-shadow);
   }
   .navbar.show ~ .navbar__overlay {
     visibility: visible;
@@ -1484,7 +1483,13 @@ html {
     flex-direction: column;
     align-items: flex-start;
     overflow: auto;
-    height: calc(100% - 26px);
+    height: calc(100% - 150px);
+    overscroll-behavior: contain;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__list {
+    height: calc(100% - 225px);
   }
 }
 .navbar__link {
@@ -1676,6 +1681,11 @@ html {
   }
   .dropdown__inner::before {
     content: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .dropdown__inner {
+    padding: 0 20px;
   }
 }
 
