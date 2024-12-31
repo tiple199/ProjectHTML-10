@@ -3,6 +3,8 @@ html{
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(9%) sepia(10%) saturate(3983%) hue-rotate(211deg) brightness(88%) contrast(96%);
     --header-bg-color:#EEE;
+    --footer-bg-color:var(--header-bg-color);
+
     --top-act-group-bg-color:#FFF;
     --top-act-group-shadow-group:rgba(237, 237, 246, 0.20);
     --top-act-group-shadow-avatar:rgba(0, 0, 0, 0.08);
@@ -32,4 +34,11 @@ html{
     --filter-btn-bg:#fff;
     --product-card-bg:#FFF;
     --product-card-shadow:rgba(237, 237, 246, 0.20);
+    // filter
+    --filter-form-bg:#FFF;
+    --filter-form-shadow:rgba(200, 200, 200, 0.40);
+    --filter-form-tag-bg:#F8F8FB;
+
+    // auth
+    --auth-content-bg:#FFF;
 }

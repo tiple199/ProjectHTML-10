@@ -1,4 +1,7 @@
 .product-card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 16px;
     border-radius: 20px;
     background: var(--product-card-bg);
@@ -33,6 +36,7 @@
     &__row{
         display: flex;
         align-items: center;
+        margin-top: auto;
     }
     &__price,&__score,&__title{
         font-size: 1.6rem;

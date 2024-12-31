@@ -1,3 +1,4 @@
+@use "../abstracts";
 *,::after,::before{
     box-sizing: border-box;
 }
@@ -25,7 +26,19 @@ a,img,button,input,textarea,select{
     font-family: inherit;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
 }
 .icon{
     filter: var(--icon-color);  
+}
+.container{
+    @include abstracts.screen(sm){
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+input{
+    background: transparent;
 }
