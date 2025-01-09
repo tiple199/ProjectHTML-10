@@ -14,10 +14,18 @@ html{
         --header-bg-color:#FFF;
         --header-shadow-color:rgba(237, 237, 246, 0.20);
     }
+    // header
+    --header-act-dropdown-bg:#FFF;
+    --header-act-dropdown-shadow:rgba(200, 200, 200, 0.40);
+    --header-act-dropdown-border-color:#d2d1d6;
+
+
     // dropdown
     --dropdown-bg:#FFF;
     --dropdown-shadow:rgba(200, 200, 200, 0.40);
     --top-menu-border-color : #D2D1D6;
+
+
     // sidebar
     --sidebar-bg:#FFF;
     --sidebar-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.40);
@@ -37,8 +45,44 @@ html{
     // filter
     --filter-form-bg:#FFF;
     --filter-form-shadow:rgba(200, 200, 200, 0.40);
-    --filter-form-tag-bg:#F8F8FB;
+    --form-tag-bg:#F8F8FB;
 
     // auth
     --auth-content-bg:#FFF;
+
+    @include abstracts.screen(md){
+        --auth-intro-bg:#FFF;
+    }
+
+    // form
+    --form-placeholder-color:#d2d1d6;
+
+    // product-detail
+    --product-detail-bg:#fff;
+    --product-detail-info-bg:#f6f6f6;
+    --product-detail-info-content-bg:#FFF;
+    --product-detail-tag-bg: #EDEDF6;
+    @include abstracts.screen(md){
+        --product-detail-bg:#FAFAFD;
+        --product-detail-info-bg:#FFF;
+    }
+
+    // breadcrumbs
+
+    --breadcrumbs-bg:#F6F6F6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
+    @include abstracts.screen(md){
+        --breadcrumbs-bg:#FFF;
+    }
+
+    // search-bar
+    --search-bar-bg:#FFF;
+    // review
+    --review-card-bg:#FAFAFD;
+    @include abstracts.screen(md){
+        --review-card-bg:#FFF;
+    }
+
+    // text-content
+    --text-content-hr-bg: #ebebeb;
 }
