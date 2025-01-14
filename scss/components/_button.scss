@@ -44,14 +44,20 @@
     background: #f8f8fb;
     user-select: none;
     padding: 0 20px;
+    white-space: nowrap;
 
     + .btn{
         &:not(.btn--no-margin){
             margin-left: 20px;
         }
     }
+
+    &-small{
+        height: 40px;
+        padding-inline: 0 16px;
+    }
+
     &--text{
-        color: #9E9DA8;
         background: transparent;
         font-weight: 400;
     }
@@ -64,6 +70,10 @@
     }
     &--rounded{
         border-radius: 99px;
+    }
+    &--danger{
+        color: #fff;
+        background: #ed4337;
     }
     &:hover{
         opacity: 0.9;
